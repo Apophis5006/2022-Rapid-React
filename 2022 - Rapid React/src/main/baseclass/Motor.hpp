@@ -43,6 +43,6 @@ public:
     @returns Talon RPM
     */
     double GetRPM() {
-        this->motorController.GetSelectedSensorVelocity() * 600 / 4096;
+        return this->motorController.GetSelectedSensorVelocity() * 600 / 4096;
     }
 };
