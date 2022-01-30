@@ -1,7 +1,5 @@
-#include "../subsystem/input.hpp"
 
-
-class joystick: public Input{
+class joystick{
     protected:
         frc::Joystick device{0};     
 
