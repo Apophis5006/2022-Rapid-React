@@ -6,11 +6,13 @@
 
 #include <Libraries.hpp>
 #include <Configuration.hpp>
+#include <Settings.hpp>
 
-#include <../subsystem/DriveTrain.hpp>
+#include <../subsystem/Input.hpp>
+//#include <../subsystem/Dashboard.hpp>
+#include <../subsystem/Drivetrain.hpp>
 
 using namespace std;
-
 /*
 The class for the robot
 */

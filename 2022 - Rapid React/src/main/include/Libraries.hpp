@@ -1,8 +1,11 @@
 // Includes all the needed libraries
 
 // Built-In:
-#include <string>
 #include <iostream>
+#include <string>
+//#include <map>
+
+#include <fmt/core.h>
 
 // CTRE_Phoenix:
 #include <ctre/Phoenix.h> // CTRE_Phoenix Version: 5.19.4: https://www.ctr-electronics.com/downloads/api/cpp/html/index.html
@@ -20,5 +23,3 @@
 
 // Analog Devices Library (ADIS16448 Inertial Measurement Unit):
 //#include <adi/ADIS16448_IMU.h> // https://wiki.analog.com/first/adis16448_imu_frc/cpp
-
-#include <fmt/core.h>
