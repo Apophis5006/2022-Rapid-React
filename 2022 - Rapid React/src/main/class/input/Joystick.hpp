@@ -3,7 +3,7 @@ class Joystick {
 protected:
     frc::Joystick joystick;
 
-    enum inputs {Trigger,X,Y,Z,Button,Twist,Throttle,Channel};
+    enum inputs {X,Y,Z,Button,Twist,Throttle,Channel};
 
 public:
     Joystick(int port = 0) : joystick(port) {}
@@ -15,12 +15,17 @@ public:
            case inputs::Y: return joystick.GetY(); break;
            case inputs::Z: return joystick.GetZ(); break;
            case inputs::Twist: return joystick.GetTwist();
-           case inputs::Throttle: return joystick.GetThrottle(); break;
-           case inputs::Trigger: return joystick.GetTrigger(); break;
            case inputs::Button: return joystick.GetRawButton(button); break;
            default: return -1; break;
        }
     }
+
+    //@returns returns an array (double[2]) containing the x and y values
+    double* GetPosition() {
+        double position[2] = {clamp(this->joystick.GetX(),-1.0,1.0),clamp(this->joystick.GetY(),-1.0,1.0)};
+        return position;
+    }
+
     double GetChannel(inputs Channel){
         switch(Channel) {
             case inputs::X: return joystick.GetXChannel(); break;

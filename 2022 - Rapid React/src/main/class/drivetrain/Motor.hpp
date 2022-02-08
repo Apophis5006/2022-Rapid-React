@@ -6,6 +6,8 @@ class Motor : public BaseMotor {
 protected:
     TalonFX motorController;
 
+    bool enabled = true;
+
 public:
     //Constructors
     /*
@@ -35,6 +37,7 @@ public:
         } else {
             this->motorController.Set(TalonFXControlMode::Disabled, 0);
         }
+        this->enabled = enabled;
     }
 
     /*
