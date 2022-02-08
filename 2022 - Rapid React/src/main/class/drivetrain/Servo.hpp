@@ -34,5 +34,6 @@ public:
         } else {
             this->motorController.Set(TalonSRXControlMode::Disabled, 0);
         }
+        this->enabled = enabled;
     }
 };

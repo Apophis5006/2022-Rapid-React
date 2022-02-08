@@ -71,10 +71,15 @@ public:
     }
 
     /*
-    Returns if the swerve drive is enabled
+    Sets the swerve to enabled or disabled
 
-    @return boolean value indicating if the drive is enabled
+    @param enabled sets the swerve to enabled if true
     */
+    void SetEnabled(bool enabled = false) {
+        this->driveMotor.SetEnabled(enabled);
+        this->steerMotor.SetEnabled(enabled);
+    }
+    //@returns boolean value indicating if the drive is enabled
     bool IsEnabled() {
         return this->enabled;
     }
@@ -87,6 +92,7 @@ public:
     double* GetAbsoluteTargetState() {
         double absoluteState[2] = {(this->baseState[0]+this->targetState[0]), (this->baseState[1]+this->targetState[1])};
         
-        return absoluteState;
+        double* pointer = absoluteState;
+        return pointer;
     }
 };

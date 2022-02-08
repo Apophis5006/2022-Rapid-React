@@ -34,7 +34,7 @@ public:
         this->baseOutput = originOutput;
     }
 
-    //Returns whether the talon is enabled
+    //@returns boolean value indicating if the motor is enabled
     bool IsEnabled() {
         return this->enabled;
     }

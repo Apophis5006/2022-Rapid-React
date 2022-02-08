@@ -8,15 +8,32 @@
 #include <Configuration.hpp>
 #include <Settings.hpp>
 
-#include <../subsystem/Input.hpp>
 //#include <../subsystem/Dashboard.hpp>
 #include <../subsystem/Drivetrain.hpp>
+#include <../subsystem/Input.hpp>
 
 using namespace std;
 /*
 The class for the robot
 */
 class Robot : public frc::TimedRobot {
+private:
+  frc::SendableChooser<string> m_chooser;
+  const string kAutoNameDefault = "Default";
+  const string kAutoNameCustom = "My Auto";
+  string m_autoSelected;
+  
+  int FLSwerve[2] = {FLD,FLS}; //The front-left swerve drive
+  int FRSwerve[2] = {FRD,FRS}; //The front-right swerve drive
+  int BLSwerve[2] = {BLD,BLS}; //The back-left swerve drive
+  int BRSwerve[2] = {BRD,BRS}; //The back-right swerve drive
+
+protected:
+  double driveTargetState[2] = {0,0}; //the target state of the robot drivetrain
+
+  Drivetrain drivetrain = Drivetrain(FLSwerve,FRSwerve,BLSwerve,BRSwerve);
+
+
 public:
   void RobotInit() override;
   void RobotPeriodic() override;
@@ -28,10 +45,4 @@ public:
   void DisabledPeriodic() override;
   void TestInit() override;
   void TestPeriodic() override;
-    
-private:
-  frc::SendableChooser<string> m_chooser;
-  const string kAutoNameDefault = "Default";
-  const string kAutoNameCustom = "My Auto";
-  string m_autoSelected;
 };
