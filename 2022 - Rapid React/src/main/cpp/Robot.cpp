@@ -54,11 +54,17 @@ void Robot::AutonomousPeriodic() {
   }
 }
 
-void Robot::TeleopInit() {}
+void Robot::TeleopInit() {
+  drivetrain.SetEnabled(true);
+}
 
-void Robot::TeleopPeriodic() {}
+void Robot::TeleopPeriodic() {
+  drivetrain.Update(); //add the function to get the input from joystick
+}
 
-void Robot::DisabledInit() {}
+void Robot::DisabledInit() {
+  drivetrain.SetEnabled(false);
+}
 
 void Robot::DisabledPeriodic() {}
 
