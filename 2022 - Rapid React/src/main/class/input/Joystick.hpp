@@ -22,7 +22,7 @@ public:
 
     //@returns returns an array (double[2]) containing the x and y values
     double* GetPosition() {
-        double position[2] = {clamp(this->joystick.GetX(),-1.0,1.0),clamp(this->joystick.GetY(),-1.0,1.0)};
+        double position[2] = {this->joystick.GetX(),this->joystick.GetY()};
         return position;
     }
 

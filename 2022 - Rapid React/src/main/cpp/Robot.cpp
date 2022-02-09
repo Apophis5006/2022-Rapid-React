@@ -10,7 +10,6 @@ void Robot::RobotInit() {
   m_chooser.AddOption(kAutoNameCustom, kAutoNameCustom);
   frc::SmartDashboard::PutData("Auto Modes", &m_chooser);
   
-  Drivetrain driveTrain = Drivetrain(swerveDrives);
 }
 
 /**

@@ -55,7 +55,7 @@ public:
     Drivetrain(int FL[2], int FR[2], int BL[2], int BR[2]) : FLSwerve(FL[0],FL[1]),FRSwerve(FR[0],FR[1]),BLSwerve(BL[0],BL[1]),BRSwerve(BR[0],BR[1]) {}
 
     //Members
-    enum DriveMode; //The publicly accessible member for the drivemode
+    //enum DriveMode; //The publicly accessible member for the drivemode
     
     //Methods
     /*
