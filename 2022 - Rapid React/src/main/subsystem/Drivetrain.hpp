@@ -65,6 +65,19 @@ public:
         
     }
 
+    void Set(double state[2]){
+        FRSwerve.Set(state);
+        FLSwerve.Set(state);
+        BRSwerve.Set(state);
+        BRSwerve.Set(state);
+    }
+    void Set(double stateFR[2],double stateFL[2],double stateBR[2],double stateBL[2]){
+        FRSwerve.Set(stateFR);
+        FLSwerve.Set(stateFL);
+        BRSwerve.Set(stateBR);
+        BRSwerve.Set(stateBL);
+    }
+
     /*
     Sets the drivetrain to enabled or disabled
 
