@@ -59,7 +59,10 @@ void Robot::TeleopInit() {
 }
 
 void Robot::TeleopPeriodic() {
-  drivetrain.Update(); //add the function to get the input from joystick
+  drivetrain.Update(); //keeps the positions up to date with target positions
+  inputVals = inputs.GetInput();
+  drivetrain.Move(new double[2]{inputVals[0],inputVals[1]}); //puts moveStick values into drivetrain
+  drivetrain.Steer(new double[2]{inputVals[2],inputVals[3]});//puts steerStick values into drivetrain
 }
 
 void Robot::DisabledInit() {

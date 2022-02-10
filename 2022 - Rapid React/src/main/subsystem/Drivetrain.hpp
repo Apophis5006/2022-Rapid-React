@@ -65,6 +65,7 @@ public:
         
     }
 
+<<<<<<< HEAD
     void Set(double state[2]){ //sets all swerves the same direction
         FLSwerve.Set(state);
         FRSwerve.Set(state);
@@ -76,6 +77,27 @@ public:
         FRSwerve.Set(stateFR);
         BLSwerve.Set(stateBL);
         BRSwerve.Set(stateBR);
+=======
+    void Steer(double vals[2]){ //used for steering in place
+        //add stuff to turn the robot
+    }
+
+    void Move(double vals[2]){
+        Set(new double[2]{(vals[0] * -1)+1 * pi,vals[1] * VELOCITY_MULTIPLIER});
+    }
+
+    void Set(double state[2]){
+        FRSwerve.Set(state);
+        FLSwerve.Set(state);
+        BRSwerve.Set(state);
+        BRSwerve.Set(state);
+    }
+    void Set(double stateFR[2],double stateFL[2],double stateBR[2],double stateBL[2]){
+        FRSwerve.Set(stateFR);
+        FLSwerve.Set(stateFL);
+        BRSwerve.Set(stateBR);
+        BRSwerve.Set(stateBL);
+>>>>>>> Dev
     }
 
     /*

@@ -32,7 +32,11 @@ protected:
   double driveTargetState[2] = {0,0}; //the target state of the robot drivetrain
 
   Drivetrain drivetrain = Drivetrain(FLSwerve,FRSwerve,BLSwerve,BRSwerve);
-
+  
+  //sticks
+  Input inputs = Input(DRIVE_STICK,STEER_STICK);
+  double * inputVals; //used to not have to call GetInputs() 4 times
+  
 
 public:
   void RobotInit() override;
