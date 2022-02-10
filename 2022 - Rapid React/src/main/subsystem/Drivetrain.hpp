@@ -65,6 +65,19 @@ public:
         
     }
 
+    void Set(double state[2]){ //sets all swerves the same direction
+        FLSwerve.Set(state);
+        FRSwerve.Set(state);
+        BLSwerve.Set(state);
+        BRSwerve.Set(state);
+    }
+    void Set(double stateFL[2],double stateFR[2],double stateBL[2],double stateBR[2]){ //sets all swerves the same direction
+        FLSwerve.Set(stateFL);
+        FRSwerve.Set(stateFR);
+        BLSwerve.Set(stateBL);
+        BRSwerve.Set(stateBR);
+    }
+
     /*
     Sets the drivetrain to enabled or disabled
 
