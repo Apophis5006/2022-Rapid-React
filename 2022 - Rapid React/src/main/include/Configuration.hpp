@@ -15,3 +15,8 @@
 #define FRD 8
 #define BLD 6
 #define BRD 9
+
+//value multiplyers
+#define VELOCITY_MULTIPLIER 30 //add actual speed later
+
+#define pi 3.14 //aproximate fore pi

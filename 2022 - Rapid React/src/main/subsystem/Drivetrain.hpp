@@ -65,6 +65,14 @@ public:
         
     }
 
+    void Steer(double vals[2]){ //used for steering in place
+        //add stuff to turn the robot
+    }
+
+    void Move(double vals[2]){
+        Set(new double[2]{(vals[0] * -1)+1 * pi,vals[1] * VELOCITY_MULTIPLIER});
+    }
+
     void Set(double state[2]){
         FRSwerve.Set(state);
         FLSwerve.Set(state);
