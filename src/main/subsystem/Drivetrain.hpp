@@ -67,9 +67,11 @@ public:
 
     void Steer(double vals[2]){ //used for steering in place
         //add stuff to turn the robot
+        Set(new double[2]{(vals[0] * -1) * (pi/2),vals[1]*VELOCITY_MULTIPLIER});
     }
 
     void Move(double vals[2]){
+        if(vals[1]<0){vals[0]*=-1;} //inverts wheel turn when it is in reverse
         Set(new double[2]{(vals[0] * -1)+1 * pi,vals[1] * VELOCITY_MULTIPLIER});
     }
 
