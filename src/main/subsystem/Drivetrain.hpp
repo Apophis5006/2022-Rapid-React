@@ -70,7 +70,7 @@ public:
         Set(new double[2]{(vals[0] * -1) * (pi/2),vals[1]*VELOCITY_MULTIPLIER});
     }
 
-    void Move(double vals[2]){
+    void Move(double vals[2]){ //used for moveing with moveStick
         if(vals[1]<0){vals[0]*=-1;} //inverts wheel turn when it is in reverse
         Set(new double[2]{(vals[0] * -1)+1 * pi,vals[1] * VELOCITY_MULTIPLIER});
     }

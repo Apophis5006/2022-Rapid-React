@@ -11,6 +11,7 @@
 //#include <../subsystem/Dashboard.hpp>
 #include <../subsystem/Drivetrain.hpp>
 #include <../subsystem/Input.hpp>
+#include <../subsystem/Autonomous.hpp>
 
 using namespace std;
 /*
