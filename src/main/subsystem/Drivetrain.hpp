@@ -62,7 +62,10 @@ public:
     Updates the states of the swerve drives
     */
     void Update() {
-        
+        FLSwerve.Update();
+        FRSwerve.Update();
+        BLSwerve.Update();
+        BRSwerve.Update();
     }
 
     void Steer(double vals[2]){ //used for steering in place

@@ -1,21 +1,25 @@
 
 class AutoStateMachine{
 
-    enum class command {START,STOP,funct};
+    enum class Command {START,STOP,funct};
 
-    AutoStateMachine(){
+//    tuple<Commands> Commands; //add once problem fixed with tuple
+
+
+
+    AutoStateMachine(Command code[]){ //takes in an array of the code
 
     }
-    void Run(command code[]){
+    void Run(Command code[]){   //runs stored code in object
         for(int i=0;i<sizeof(code);i++){
            if(RunLine(code[i]))break; 
         }
     }
 
-    bool RunLine(command line){ //runs individual line of auto code
-        switch(line){
-               case command::START: break;
-               case command::STOP: return false; //used for stoping mid code
+    bool RunLine(Command line){ //runs individual line of auto code
+        switch(/*get<0>(*/line){
+               case Command::START: break;
+               case Command::STOP: return false; //used for stoping mid code
             }
         return true;
     }
