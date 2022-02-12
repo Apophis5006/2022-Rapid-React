@@ -12,6 +12,7 @@
 #include <../subsystem/Drivetrain.hpp>
 #include <../subsystem/Input.hpp>
 #include <../subsystem/Autonomous.hpp>
+#include <../subsystem/Shooter.hpp>
 
 using namespace std;
 /*
